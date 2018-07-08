@@ -27,11 +27,11 @@ static KVFactory memFactory = {
 static KVFactory btFactory = {
    &memFactory,
    "bt",
-   sqlite4OpenBtree,
+   sqlite4KVStoreOpenBtree,
    1
 };
 KVFactory sqlite4BuiltinFactory = {
-   &btFactory,
+   &btFactory, //&memFactory,
    "main",
    sqlite4KVStoreOpenLsm,
    1

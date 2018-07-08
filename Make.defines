@@ -93,8 +93,9 @@ LIBOBJ+= vdbe.o parse.o \
          callback.o complete.o ctime.o date.o delete.o env.o expr.o \
          fault.o fkey.o fts5.o fts5func.o \
          func.o global.o hash.o \
-         icu.o insert.o kv.o kvlsm.o kvmem.o legacy.o \
+         icu.o insert.o kv.o kvlsm.o kvmem.o kvbt.o legacy.o \
          lsm_ckpt.o lsm_file.o lsm_log.o lsm_main.o lsm_mem.o lsm_mutex.o \
+         bt_unix.o bt_pager.o bt_main.o bt_varint.o bt_lock.o bt_log.o \
          lsm_shared.o lsm_str.o lsm_sorted.o lsm_tree.o \
          lsm_unix.o lsm_varint.o \
          main.o malloc.o math.o mem.o mem0.o mem1.o mem2.o mem3.o mem5.o \
@@ -136,6 +137,7 @@ SRC = \
   $(TOP)/src/kv.h \
   $(TOP)/src/kvlsm.c \
   $(TOP)/src/kvmem.c \
+  $(TOP)/src/kvbt.c \
   $(TOP)/src/legacy.c \
   $(TOP)/src/lsm.h \
   $(TOP)/src/lsmInt.h \
@@ -151,6 +153,14 @@ SRC = \
   $(TOP)/src/lsm_tree.c \
   $(TOP)/src/lsm_unix.c \
   $(TOP)/src/lsm_varint.c \
+  $(TOP)/src/bt.h \
+  $(TOP)/src/btInt.h \
+  $(TOP)/src/bt_lock.c \
+  $(TOP)/src/bt_log.c \
+  $(TOP)/src/bt_main.c \
+  $(TOP)/src/bt_pager.c \
+  $(TOP)/src/bt_unix.c \
+  $(TOP)/src/bt_varint.c \
   $(TOP)/src/main.c \
   $(TOP)/src/malloc.c \
   $(TOP)/src/math.c \
@@ -286,6 +296,8 @@ HDR = \
    $(TOP)/src/kv.h \
    $(TOP)/src/lsm.h \
    $(TOP)/src/lsmInt.h \
+   $(TOP)/src/bt.h \
+   $(TOP)/src/btInt.h \
    $(TOP)/src/mutex.h \
    opcodes.h \
    $(TOP)/src/os.h \

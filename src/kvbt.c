@@ -340,7 +340,7 @@ static int btGetMethod(
   return SQLITE4_NOTFOUND;
 }
 
-int sqlite4OpenBtree(
+int sqlite4KVStoreOpenBtree(
   sqlite4_env *pEnv,              /* The environment to use */
   sqlite4_kvstore **ppKVStore,    /* OUT: New KV store returned here */
   const char *zFilename,          /* Name of database file to open */
@@ -390,7 +390,7 @@ int sqlite4OpenBtree(
     sqlite4BtClose(pDb);
     pNew = 0;
   }
-  *ppKVStore = pNew;
+  *ppKVStore = (sqlite4_kvstore*)pNew;
   return rc;
 }
 

@@ -669,17 +669,17 @@ void sqlite4Memsys3Dump(const char *zFilename){
 ** is not required to be threadsafe (it is not).
 */
 const sqlite4_mem_methods *sqlite4MemGetMemsys3(void){
-  static const sqlite4_mem_methods mempoolMethods = {
-     memsys3Malloc,
-     memsys3Free,
-     memsys3Realloc,
-     memsys3Size,
-     memsys3Roundup,
-     memsys3Init,
-     memsys3Shutdown,
-     0
-  };
-  return &mempoolMethods;
+  // static const sqlite4_mem_methods mempoolMethods = {
+  //    memsys3Malloc,
+  //    memsys3Free,
+  //    memsys3Realloc,
+  //    memsys3Size,
+  //    memsys3Roundup,
+  //    memsys3Init,
+  //    memsys3Shutdown,
+  //    0
+  // };
+  return 0;
 }
 
 #endif /* SQLITE4_ENABLE_MEMSYS3 */

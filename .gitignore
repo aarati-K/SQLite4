@@ -1,0 +1,11 @@
+*.o
+autom4te.cache/
+*.log
+*.a
+parse*
+sqlite4*
+lemon*
+configure*
+config*
+mkkeywordhash
+

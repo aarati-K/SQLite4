@@ -360,18 +360,18 @@ static void *sqlite4MemRealloc(void *p, void *pPrior, sqlite4_size_t nByte){
 ** sqlite4DefaultEnv.m with pointers to the routines in this file.
 */
 void sqlite4MemSetDefault(sqlite4_env *pEnv){
-  static const sqlite4_mem_methods defaultMethods = {
-     sqlite4MemMalloc,
-     sqlite4MemFree,
-     sqlite4MemRealloc,
-     sqlite4MemSize,
-     sqlite4MemInit,
-     sqlite4MemShutdown,
-     0,
-     0,
-     &mem2
-  };
-  pEnv->m = defaultMethods;
+  // static const sqlite4_mem_methods defaultMethods = {
+  //    sqlite4MemMalloc,
+  //    sqlite4MemFree,
+  //    sqlite4MemRealloc,
+  //    sqlite4MemSize,
+  //    sqlite4MemInit,
+  //    sqlite4MemShutdown,
+  //    0,
+  //    0,
+  //    &mem2
+  // };
+  // pEnv->m = defaultMethods;
 }
 
 /*

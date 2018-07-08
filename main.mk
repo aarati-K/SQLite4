@@ -279,6 +279,7 @@ TESTSRC2 = \
 # Header files used by all library source files.
 #
 HDR = \
+   $(TOP)/src/bt.h \
    $(TOP)/src/btInt.h \
    $(TOP)/src/hash.h \
    $(TOP)/src/hwtime.h \

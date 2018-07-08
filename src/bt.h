@@ -14,8 +14,11 @@
 
 #ifndef __BT_H
 #define __BT_H
-
-#include <sqlite4.h>
+#include <stddef.h>
+#include "sqlite4.h"
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 typedef struct bt_db bt_db;
 typedef struct bt_cursor bt_cursor;
@@ -260,5 +263,8 @@ struct bt_env {
 #define BT_OPEN_SHARED     0x0004
 #define BT_OPEN_READONLY   0x0008
 
+#ifdef __cplusplus
+}  /* End of the 'extern "C"' block */
+#endif
 #endif /* ifndef __BT_H */
 

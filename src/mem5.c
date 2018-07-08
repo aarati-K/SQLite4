@@ -560,17 +560,17 @@ void sqlite4Memsys5Dump(const char *zFilename){
 ** struct populated with the memsys5 methods.
 */
 const sqlite4_mem_methods *sqlite4MemGetMemsys5(void){
-  static const sqlite4_mem_methods memsys5Methods = {
-     memsys5Malloc,
-     memsys5Free,
-     memsys5Realloc,
-     memsys5Size,
-     memsys5Roundup,
-     memsys5Init,
-     memsys5Shutdown,
-     0
-  };
-  return &memsys5Methods;
+  // static const sqlite4_mem_methods memsys5Methods = {
+  //    memsys5Malloc,
+  //    memsys5Free,
+  //    memsys5Realloc,
+  //    memsys5Size,
+  //    memsys5Roundup,
+  //    memsys5Init,
+  //    memsys5Shutdown,
+  //    0
+  // };
+  return 0;
 }
 
 #endif /* SQLITE4_ENABLE_MEMSYS5 */

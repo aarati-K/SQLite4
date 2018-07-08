@@ -158,7 +158,7 @@ typedef struct sqlite4_kvcursor KVCursor;
 typedef unsigned char KVByteArray;
 typedef sqlite4_kvsize KVSize;
 
-int sqlite4OpenBtree(sqlite4_env*, KVStore**, const char *, unsigned);
+int sqlite4KVStoreOpenBtree(sqlite4_env*, KVStore**, const char *, unsigned);
 int sqlite4KVStoreOpenMem(sqlite4_env*, KVStore**, const char *, unsigned);
 int sqlite4KVStoreOpenLsm(sqlite4_env*, KVStore**, const char *, unsigned);
 int sqlite4KVStoreOpen(
